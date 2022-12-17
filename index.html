@@ -12,8 +12,8 @@
 <style>
 
 body {
-    overflow: hidden;
     font-family: 'Calibri';
+    margin: 0;
 }
 
 .mainCont {
@@ -54,15 +54,33 @@ hr {
 
 .name {
     font-size: min(25vw, 8vw);
+    background-image: url("https://www.pngarts.com/files/2/Black-Abstract-Lines-Transparent.png");
+    background-position-y: center;
+    background-position-x: center;
+    background-size: 100%;
+    background-repeat: no-repeat;
 }
 
 .firstName {
     margin-right: 30vw;
+    z-index: 8;
 }
 
 .firstTitle {
     margin-left: 15vw;
+    margin-bottom: 10vh;
+    z-index: 8;
 }
+
+#art {
+    max-width: 400px;
+    position: absolute;
+    left: 70px;
+    top: 70px;
+    display: block;
+    z-index: 1;
+}
+
 
 
 </style>
@@ -79,6 +97,8 @@ hr {
             <div class="name">
                 <div class="firstName">Ross Hamey</div>
                 <div class="firstTitle">Web Developer</div>
+                <div class="holder">
+                </div>
             </div>
         </div>
         <hr>
