@@ -14,6 +14,7 @@
 body {
     font-family: 'Calibri';
     margin: 0;
+    overflow-x: hidden;
 }
 
 .mainCont {
@@ -53,6 +54,11 @@ hr {
     min-width: 70%;
 }
 
+.aboutSection {
+    min-width: 65%;
+    max-width: 65%;
+}
+
 .name {
     font-size: min(25vw, 8vw);
     background-image: url("https://www.pngarts.com/files/2/Black-Abstract-Lines-Transparent.png");
@@ -72,6 +78,40 @@ hr {
     margin-left: 15vw;
     margin-bottom: max(3vh, 0.5vh);
     font-weight: 900;
+}
+
+.aboutText {
+    margin-top: max(4vh, 0.5vh);
+    margin-bottom: max(4vh, 0.5vh);
+    font-size: 20px;
+}
+
+.aboutTitle {
+    margin-top: max(3vh, 0.5vh);
+    font-size: 26px;
+    font-weight: 900;
+}
+
+.aboutLangs {
+    overflow-x: hidden;
+    overflow-y: hidden;
+}
+
+#image-track {
+  display: flex;
+  gap: 4vmin;
+  transform: translate(0%, -50%);
+  user-select: none;
+  margin-top: 12vh;
+  margin-bottom: 0;
+}
+
+#image-track > .image {
+  width: 14vmin;
+  height: 14vmin;
+  object-fit: contain;
+  object-position: 100% center;
+  margin-bottom: 0;
 }
 
 
@@ -101,9 +141,25 @@ hr {
             <div class="aboutText">
             Hey! My name is Ross Hamey and I am an aspiring Web Developer.
             <br>
-            I've always been someone who has been interested in technology, and have had a knack for working with computers. Going into college, I decided to major in Biology as it is what I believed I wanted to do at the time.
+            <br>
+            <i>I've always been someone who has been interested in technology, and have had a knack for working with computers. Going into college, I decided to major in Biology as it is what I believed I wanted to do at the time.</i>
+            <br>
             <br>
             However, I eventually found that the material was not as engaging as I had hoped, and more recently, I have become infatuated with coding / web development. It is a rather alluring task to me, as you can watch a product or project grow infront of you into whatever you desire.
+            </div>
+            <div class="aboutLangs">
+                <div id="image-track" data-mouse-down-at="0" data-prev-percentage="0">
+                    <img class="image" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" draggable="false" />
+                    <img class="image" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" draggable="false" />
+                    <img class="image" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" draggable="false" />
+                    <img class="image" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" draggable="false" />
+                    <img class="image" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" draggable="false" />
+                    <img class="image" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jquery/jquery-original.svg" draggable="false" />
+                    <img class="image" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" draggable="false" />
+                    <img class="image" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/flask/flask-original.svg" draggable="false" />
+                    <img class="image" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/npm/npm-original-wordmark.svg" draggable="false" />
+                    <img class="image" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" draggable="false" />
+                  </div>
             </div>
         </div>
         <hr>
@@ -118,4 +174,42 @@ hr {
     </div>
 
 </body>
+
+<script>
+
+const track = document.getElementById("image-track");
+const handleOnDown = e => track.dataset.mouseDownAt = e.clientX;
+const handleOnUp = () => {
+  track.dataset.mouseDownAt = "0";
+  track.dataset.prevPercentage = track.dataset.percentage;
+}
+const handleOnMove = e => {
+  if(track.dataset.mouseDownAt === "0") return;
+
+  const mouseDelta = parseFloat(track.dataset.mouseDownAt) - e.clientX,
+        maxDelta = window.innerWidth / 2;
+  const percentage = (mouseDelta / maxDelta) * -100,
+        nextPercentageUnconstrained = parseFloat(track.dataset.prevPercentage) + percentage,
+        nextPercentage = Math.max(Math.min(nextPercentageUnconstrained, 0), -100);
+
+  track.dataset.percentage = nextPercentage;
+  track.animate({
+    transform: `translate(${nextPercentage}%, -50%)`
+  }, { duration: 1200, fill: "forwards" });
+
+  for(const image of track.getElementsByClassName("image")) {
+    image.animate({
+      objectPosition: `${100 + nextPercentage}% center`
+    }, { duration: 1200, fill: "forwards" });
+  }
+}
+
+window.onmousedown = e => handleOnDown(e);
+window.ontouchstart = e => handleOnDown(e.touches[0]);
+window.onmouseup = e => handleOnUp(e);
+window.ontouchend = e => handleOnUp(e.touches[0]);
+window.onmousemove = e => handleOnMove(e);
+window.ontouchmove = e => handleOnMove(e.touches[0]);
+
+</script>
 </html>
