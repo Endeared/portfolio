@@ -1,2 +1,1 @@
-# portfolio
- 
+# portfolio project for odin project
