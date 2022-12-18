@@ -94,22 +94,6 @@
     padding-bottom: 250px;
   }
 
-  /* .project1 {
-    background-image: url("https://i.postimg.cc/6QLXwPMn/download.png");
-  } */
-
-  .project2 {
-    background-image: url("https://i.postimg.cc/63CqRz6h/download-1.png")
-  }
-
-  .project3 {
-    background-image: url("https://i.postimg.cc/mrXJjGkL/download-2.png");
-  }
-
-  .project4 {
-    background-image: url("https://i.postimg.cc/QdXjnh81/download-3.png")
-  }
-
   .firstName {
     margin-right: 30vw;
     font-weight: 300;
@@ -183,7 +167,7 @@
     border: 5px solid grey;
     border-radius: 10px;
     padding: 10px;
-    box-shadow: 0px 0px 20px rgb(80, 80, 96);
+    box-shadow: 0px 0px 20px rgb(80, 136, 200);
   }
 
   .carousel__cell:nth-child(9n+1) {
@@ -275,7 +259,7 @@
     background-color: hsla(0, 0%, 0%, 0.794);
     color: rgb(255, 255, 255);
     border-radius: 50%;
-    box-shadow: 0px 0px 20px rgb(80, 80, 96);
+    box-shadow: 0px 0px 20px rgb(80, 136, 200);
     margin-left: 10px;
     margin-right: 10px;
     transition: 0.2s ease-out;
@@ -362,19 +346,29 @@
     width: 600px;
   }
 
-  .bgImg img {
+  .project1 .bgImg img, .project3 .bgImg img {
     width: 400px;
     height: auto;
     position: absolute;
     border: 5px solid rgb(69, 69, 69);
-    box-shadow: 0px 0px 20px rgb(80, 80, 96);
+    box-shadow: 0px 0px 20px rgb(80, 136, 200);
     border-radius: 20px;
     top: 0;
     left: 0;
   }
 
-  .project1 {
-    position: relative;
+  .project2 .bgImg img, .project4 .bgImg img {
+    width: 400px;
+    height: auto;
+    position: absolute;
+    border: 5px solid rgb(69, 69, 69);
+    box-shadow: 0px 0px 20px rgb(80, 136, 200);
+    border-radius: 20px;
+    top: 0;
+    right: 0;
+  }
+
+  .project1, .project2, .project3, .project4 {
     display: flex;
     flex-direction: row;
   }
@@ -483,8 +477,14 @@
             <div class="GitHub"><a href="https://github.com/Endeared/stockTickerSiteAndBot">GitHub Repo ↗</a></div>
           </div>
         </div>
+        <div class="bgImg">
+          <img src="https://i.postimg.cc/63CqRz6h/download-1.png">
+        </div>
       </div>
       <div class="project3" id="stockBot">
+        <div class="bgImg">
+          <img src="https://i.postimg.cc/mrXJjGkL/download-2.png">
+        </div>
         <div class="projContOdd">
           <div class="projTitle">Stock Ticker Bot (Discord)</div>
           <div class="projDesc">
@@ -502,12 +502,20 @@
       <div class="project4" id="staticPages">
         <div class="projContEven">
           <div class="projTitle">Various Static Pages</div>
-          <div class="projDesc">Test</div>
+          <div class="projDesc">
+            I also regularly make various static pages, all for personal projects, for fun, or for assignments as per curriculum that I am undergoing.
+            <br>
+            <br>
+            None of these pages have a back-end associated with them (currently), although I do have plans in the future to implement back-end features!
+          </div>
           <div class="projBuild">Built using HTML5, CSS3, and JavaScript</div>
           <div class="viewer">
             <div class="liveSite"><a href="https://endeared.github.io/adminPage/">Live Example ↗</a></div>
             <div class="GitHub"><a href="https://github.com/Endeared/adminPage">GitHub Repo ↗</a></div>
           </div>
+        </div>
+        <div class="bgImg">
+          <img src="https://i.postimg.cc/gmhrj21S/download-3.png">
         </div>
       </div>
     </div>
