@@ -70,6 +70,16 @@ hr {
     background-repeat: no-repeat;
 }
 
+.project1 {
+    margin-top: 40px;
+    background-image: url("https://i.postimg.cc/6QLXwPMn/download.png");
+    background-position-y: left;
+    background-position-x: left;
+    background-size: 30%;
+    background-repeat: no-repeat;
+    padding-bottom: 200px;
+}
+
 .firstName {
     margin-right: 30vw;
     font-weight: 300;
@@ -175,7 +185,7 @@ hr {
 
 .carousel-options button {
   margin: 0;
-  padding: 5px;
+  padding: 10px;
   border: none;
   background-color:hsla(0, 0%, 0%, 0.794);
   color: rgb(255, 255, 255);
@@ -183,6 +193,12 @@ hr {
   box-shadow: 0px 0px 20px rgb(80, 80, 96);
   margin-left: 10px;
   margin-right: 10px;
+  transition: 0.2s ease-out;
+}
+
+.carousel-options button:hover {
+  scale: 135%;
+  transition: 0.2s ease-out;
 }
 
 * {
@@ -254,7 +270,17 @@ hr {
         <hr>
         <div class="projectsSection">
           <div class="projectsTitle">PROJECTS</div>
-          <div class="project1"></div>
+          <div class="project1" id="weather">
+            <div class="projCont">
+              <div class="projTitle">Weather Page</div>
+              <div class="projDesc">Test</div>
+              <div class="projBuild">Built using HTML5, CSS3, and JavaScript</div>
+              <div class="viewer">
+                <div class="liveSite" href="https://endeared.github.io/weatherForecastPage/">Click</div>
+                <div class="GitHub"></div>
+              </div>
+            </div>
+          </div>
         </div>
         <hr>
         <div class="githubSection">
