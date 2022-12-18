@@ -1,377 +1,510 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="index.js" defer></script>
-    <link rel="stylesheet" type="text/css" href="indexStyle.css">
-    <title>Ross' Portfolio</title>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="index.js" defer></script>
+  <link rel="stylesheet" type="text/css" href="indexStyle.css">
+  <title>Ross' Portfolio</title>
 </head>
 
 <style>
-
-body {
+  body {
     font-family: 'Calibri';
     margin: 0;
     overflow-x: hidden;
     background-color: rgb(37, 37, 39);
     color: white;
-}
+  }
 
-.mainCont {
+  .mainCont {
     display: flex;
     flex-direction: column;
     align-items: center;
     width: 100%;
-}
+  }
 
-.landingSection {
+  .landingSection {
     width: 100%;
-}
+  }
 
-.header {
+  .header {
     display: flex;
     justify-content: center;
     margin-top: max(3vh, 0.5vh);
-}
+  }
 
-.name {
+  .name {
     text-align: center;
-}
+  }
 
-.header div {
+  .header div {
     display: flex;
-}
+  }
 
-.icon {
+  .icon {
     padding-right: max(40vw, 0.1vw);
-}
+  }
 
-.home {
+  .home {
     padding-right: 20px;
-}
+  }
 
-hr {
+  hr {
     min-width: 70%;
-}
+  }
 
-.aboutSection, .projectsSection, .githubSection, .contactSection {
+  .aboutSection,
+  .projectsSection,
+  .githubSection,
+  .contactSection {
     min-width: 65%;
     max-width: 65%;
-}
+  }
 
-.name {
+  .name {
     font-size: min(25vw, 8vw);
     background-image: url("https://www.pngarts.com/files/2/Black-Abstract-Lines-Transparent.png");
     background-position-y: center;
     background-position-x: center;
     background-size: 100%;
     background-repeat: no-repeat;
-}
+  }
 
-.project1 {
+  .project1,
+  .project3,
+  .project5 {
     margin-top: 40px;
-    background-image: url("https://i.postimg.cc/6QLXwPMn/download.png");
     background-position-y: left;
     background-position-x: left;
     background-size: 30%;
     background-repeat: no-repeat;
-    padding-bottom: 200px;
-}
+    padding-bottom: 250px;
+  }
 
-.firstName {
+  .project2,
+  .project4 {
+    margin-top: 40px;
+    background-position-y: right;
+    background-position-x: right;
+    background-size: 30%;
+    background-repeat: no-repeat;
+    padding-bottom: 150px;
+  }
+
+  .project1 {
+    background-image: url("https://i.postimg.cc/6QLXwPMn/download.png");
+  }
+
+  .project3 {
+    background-image: url("https://i.postimg.cc/6QLXwPMn/download.png");
+  }
+
+  .firstName {
     margin-right: 30vw;
     font-weight: 300;
     margin-top: max(3vh, 0.5vh);
-}
+  }
 
-.firstTitle {
+  .firstTitle {
     margin-left: 15vw;
     margin-bottom: max(3vh, 0.5vh);
     font-weight: 900;
-}
+  }
 
-.aboutText {
+  .aboutText {
     margin-top: max(4vh, 0.5vh);
     margin-bottom: max(4vh, 0.5vh);
     font-size: 20px;
-}
+  }
 
-.aboutTitle, .projectsTitle, .githubTitle, .contactTitle {
+  .aboutTitle,
+  .projectsTitle,
+  .githubTitle,
+  .contactTitle {
     margin-top: max(3vh, 0.5vh);
     font-size: 26px;
     font-weight: 900;
-}
-
-
-
-.scene {
-  width: 210px;
-  height: 140px;
-  margin: 80px auto;
-  perspective: 1500px;
-  margin-bottom: 10vh;
-}
-
-@media screen and (max-width: 700px) {
-  .scene {
-    perspective: 300px;
   }
-}
 
-@media screen and (max-width: 390px) {
+
+
   .scene {
-    perspective: 150px;
+    width: 210px;
+    height: 140px;
+    margin: 80px auto;
+    perspective: 1500px;
+    margin-bottom: 10vh;
   }
-}
 
-.carousel {
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  transform: translateZ(-288px);
-  transform-style: preserve-3d;
-  transition: transform 1s;
-}
+  @media screen and (max-width: 700px) {
+    .scene {
+      perspective: 300px;
+    }
+  }
 
-.carousel__cell {
-  position: absolute;
-  width: 190px;
-  height: 190px;
-  left: 10px;
-  top: 10px;
-  line-height: 116px;
-  font-size: 80px;
-  font-weight: bold;
-  color: white;
-  text-align: center;
-  transition: transform 1s, opacity 1s;
-  border: 5px solid grey;
-  border-radius: 10px;
-  padding: 10px;
-  box-shadow: 0px 0px 20px rgb(80, 80, 96);
-}
+  @media screen and (max-width: 390px) {
+    .scene {
+      perspective: 150px;
+    }
+  }
 
-.carousel__cell:nth-child(9n+1) { background: hsl(225, 4%, 21%); }
-.carousel__cell:nth-child(9n+2) { background: hsl(225, 4%, 21%); }
-.carousel__cell:nth-child(9n+3) { background: hsl(225, 4%, 21%); }
-.carousel__cell:nth-child(9n+4) { background: hsl(225, 4%, 21%); }
-.carousel__cell:nth-child(9n+5) { background: hsl(225, 4%, 21%); }
-.carousel__cell:nth-child(9n+6) { background: hsl(225, 4%, 21%); }
-.carousel__cell:nth-child(9n+7) { background: hsl(225, 4%, 21%); }
-.carousel__cell:nth-child(9n+8) { background: hsl(225, 4%, 21%); }
-.carousel__cell:nth-child(9n+0) { background: hsl(225, 4%, 21%); }
+  .carousel {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    transform: translateZ(-288px);
+    transform-style: preserve-3d;
+    transition: transform 1s;
+  }
 
-.carousel__cell:nth-child(1) { transform: rotateY(  0deg) translateZ(288px); }
-.carousel__cell:nth-child(2) { transform: rotateY( 40deg) translateZ(288px); }
-.carousel__cell:nth-child(3) { transform: rotateY( 80deg) translateZ(288px); }
-.carousel__cell:nth-child(4) { transform: rotateY(120deg) translateZ(288px); }
-.carousel__cell:nth-child(5) { transform: rotateY(160deg) translateZ(288px); }
-.carousel__cell:nth-child(6) { transform: rotateY(200deg) translateZ(288px); }
-.carousel__cell:nth-child(7) { transform: rotateY(240deg) translateZ(288px); }
-.carousel__cell:nth-child(8) { transform: rotateY(280deg) translateZ(288px); }
-.carousel__cell:nth-child(9) { transform: rotateY(320deg) translateZ(288px); }
+  .carousel__cell {
+    position: absolute;
+    width: 190px;
+    height: 190px;
+    left: 10px;
+    top: 10px;
+    line-height: 116px;
+    font-size: 80px;
+    font-weight: bold;
+    color: white;
+    text-align: center;
+    transition: transform 1s, opacity 1s;
+    border: 5px solid grey;
+    border-radius: 10px;
+    padding: 10px;
+    box-shadow: 0px 0px 20px rgb(80, 80, 96);
+  }
 
-.carousel-options {
-  text-align: center;
-  position: relative;
-  z-index: 2;
-  display: flex;
-  justify-content: center;
-  margin-right: 150px;
-  margin-bottom: 5vh;
-}
+  .carousel__cell:nth-child(9n+1) {
+    background: hsl(225, 4%, 21%);
+  }
 
-.carousel-options button {
-  margin: 0;
-  padding: 10px;
-  border: none;
-  background-color:hsla(0, 0%, 0%, 0.794);
-  color: rgb(255, 255, 255);
-  border-radius: 50%;
-  box-shadow: 0px 0px 20px rgb(80, 80, 96);
-  margin-left: 10px;
-  margin-right: 10px;
-  transition: 0.2s ease-out;
-}
+  .carousel__cell:nth-child(9n+2) {
+    background: hsl(225, 4%, 21%);
+  }
 
-.carousel-options button:hover {
-  scale: 135%;
-  transition: 0.2s ease-out;
-}
+  .carousel__cell:nth-child(9n+3) {
+    background: hsl(225, 4%, 21%);
+  }
 
-* {
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box;
-}
+  .carousel__cell:nth-child(9n+4) {
+    background: hsl(225, 4%, 21%);
+  }
 
-.cells-range, .radio {
-  scale: 0%;
-  background-color: red;
-}
+  .carousel__cell:nth-child(9n+5) {
+    background: hsl(225, 4%, 21%);
+  }
+
+  .carousel__cell:nth-child(9n+6) {
+    background: hsl(225, 4%, 21%);
+  }
+
+  .carousel__cell:nth-child(9n+7) {
+    background: hsl(225, 4%, 21%);
+  }
+
+  .carousel__cell:nth-child(9n+8) {
+    background: hsl(225, 4%, 21%);
+  }
+
+  .carousel__cell:nth-child(9n+0) {
+    background: hsl(225, 4%, 21%);
+  }
+
+  .carousel__cell:nth-child(1) {
+    transform: rotateY(0deg) translateZ(288px);
+  }
+
+  .carousel__cell:nth-child(2) {
+    transform: rotateY(40deg) translateZ(288px);
+  }
+
+  .carousel__cell:nth-child(3) {
+    transform: rotateY(80deg) translateZ(288px);
+  }
+
+  .carousel__cell:nth-child(4) {
+    transform: rotateY(120deg) translateZ(288px);
+  }
+
+  .carousel__cell:nth-child(5) {
+    transform: rotateY(160deg) translateZ(288px);
+  }
+
+  .carousel__cell:nth-child(6) {
+    transform: rotateY(200deg) translateZ(288px);
+  }
+
+  .carousel__cell:nth-child(7) {
+    transform: rotateY(240deg) translateZ(288px);
+  }
+
+  .carousel__cell:nth-child(8) {
+    transform: rotateY(280deg) translateZ(288px);
+  }
+
+  .carousel__cell:nth-child(9) {
+    transform: rotateY(320deg) translateZ(288px);
+  }
+
+  .carousel-options {
+    text-align: center;
+    position: relative;
+    z-index: 2;
+    display: flex;
+    justify-content: center;
+    margin-right: 150px;
+    margin-bottom: 5vh;
+  }
+
+  .carousel-options button {
+    margin: 0;
+    padding: 10px;
+    border: none;
+    background-color: hsla(0, 0%, 0%, 0.794);
+    color: rgb(255, 255, 255);
+    border-radius: 50%;
+    box-shadow: 0px 0px 20px rgb(80, 80, 96);
+    margin-left: 10px;
+    margin-right: 10px;
+    transition: 0.2s ease-out;
+  }
+
+  .carousel-options button:hover {
+    scale: 135%;
+    transition: 0.2s ease-out;
+  }
+
+  * {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+  }
+
+  .cells-range,
+  .radio {
+    scale: 0%;
+    background-color: red;
+  }
 
 
+  .projectsSection {
+    font-size: 16px;
+  }
 
+
+  .projContOdd {
+    display: flex;
+    align-items: flex-end;
+    flex-direction: column;
+  }
+
+  .viewer {
+    display: flex;
+    gap: 35px;
+  }
+
+  body {
+    margin: 0;
+  }
 
 </style>
 
 <body>
 
-    <div class="mainCont">
-        <div class="landingSection">
-            <div class="header">
-                <div class="icon">Placeholder</div>
-                <div class="home">Home</div>
-                <div class="GitHub">GitHub</div>
-            </div>
-            <div class="name">
-                <div class="firstName">ROSS HAMEY</div>
-                <div class="firstTitle">WEB DEVELOPER</div>
-                <div class="holder">
-                </div>
-            </div>
+  <div class="mainCont">
+    <div class="landingSection">
+      <div class="header">
+        <div class="icon">Placeholder</div>
+        <div class="home">Home</div>
+        <div class="GitHub">GitHub</div>
+      </div>
+      <div class="name">
+        <div class="firstName">ROSS HAMEY</div>
+        <div class="firstTitle">WEB DEVELOPER</div>
+        <div class="holder">
         </div>
-        <hr>
-        <div class="aboutSection">
-            <div class="aboutTitle">ABOUT</div>
-            <div class="aboutText">
-            Hey! My name is Ross Hamey and I am an aspiring Web Developer.
-            <br>
-            <br>
-            <i>I've always been someone who has been interested in technology, and have had a knack for working with computers. Going into college, I decided to major in Biology as it is what I believed I wanted to do at the time.</i>
-            <br>
-            <br>
-            However, I eventually found that the material was not as engaging as I had hoped, and more recently, I have become infatuated with coding / web development. It is a rather alluring task to me, as you can watch a product or project grow infront of you into whatever you desire.
-            </div>
-            <div class="aboutLangs">
-              <div class="scene">
-                <div class="carousel">
-                  <div class="carousel__cell"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" /></div>
-                  <div class="carousel__cell"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" /></div>
-                  <div class="carousel__cell"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" /></div>
-                  <div class="carousel__cell"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" /></div>
-                  <div class="carousel__cell"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" /></div>
-                  <div class="carousel__cell"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" /></div>
-                  <div class="carousel__cell"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/npm/npm-original-wordmark.svg" /></div>
-                  <div class="carousel__cell"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" /></div>
-                  <div class="carousel__cell"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jquery/jquery-original.svg" /></div>
-                  <div class="carousel__cell"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/flask/flask-original.svg" /></div>
-                </div>
-              </div>
-              <div class="carousel-options">
-                  <input class="cells-range" value="10" />
-                  <button class="previous-button">↺</button>
-                  <button class="next-button">↻</button>
-                  <input type="radio" class="radio" name="orientation" value="horizontal" checked />
-              </div>
-            </div>
-        </div>
-        <hr>
-        <div class="projectsSection">
-          <div class="projectsTitle">PROJECTS</div>
-          <div class="project1" id="weather">
-            <div class="projCont">
-              <div class="projTitle">Weather Page</div>
-              <div class="projDesc">Test</div>
-              <div class="projBuild">Built using HTML5, CSS3, and JavaScript</div>
-              <div class="viewer">
-                <div class="liveSite" href="https://endeared.github.io/weatherForecastPage/">Click</div>
-                <div class="GitHub"></div>
-              </div>
-            </div>
+      </div>
+    </div>
+    <hr>
+    <div class="aboutSection">
+      <div class="aboutTitle">ABOUT</div>
+      <div class="aboutText">
+        Hey! My name is Ross Hamey and I am an aspiring Web Developer.
+        <br>
+        <br>
+        <i>I've always been someone who has been interested in technology, and have had a knack for working with
+          computers. Going into college, I decided to major in Biology as it is what I believed I wanted to do at the
+          time.</i>
+        <br>
+        <br>
+        However, I eventually found that the material was not as engaging as I had hoped, and more recently, I have
+        become infatuated with coding / web development. It is a rather alluring task to me, as you can watch a product
+        or project grow infront of you into whatever you desire.
+      </div>
+      <div class="aboutLangs">
+        <div class="scene">
+          <div class="carousel">
+            <div class="carousel__cell"><img
+                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" /></div>
+            <div class="carousel__cell"><img
+                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" /></div>
+            <div class="carousel__cell"><img
+                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" /></div>
+            <div class="carousel__cell"><img
+                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" /></div>
+            <div class="carousel__cell"><img
+                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" /></div>
+            <div class="carousel__cell"><img
+                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" /></div>
+            <div class="carousel__cell"><img
+                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/npm/npm-original-wordmark.svg" /></div>
+            <div class="carousel__cell"><img
+                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" /></div>
+            <div class="carousel__cell"><img
+                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jquery/jquery-original.svg" /></div>
+            <div class="carousel__cell"><img
+                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/flask/flask-original.svg" /></div>
           </div>
         </div>
-        <hr>
-        <div class="githubSection">
-          <div class="githubTitle">GITHUB</div>
+        <div class="carousel-options">
+          <input class="cells-range" value="10" />
+          <button class="previous-button">↺</button>
+          <button class="next-button">↻</button>
+          <input type="radio" class="radio" name="orientation" value="horizontal" checked />
         </div>
-        <hr>
-        <div class="contactSection">
-          <div class="contactTitle">CONTACT</div>
-        </div>
+      </div>
     </div>
+    <hr>
+    <div class="projectsSection">
+      <div class="projectsTitle">PROJECTS</div>
+      <div class="project1" id="weather">
+        <div class="projContOdd">
+          <div class="projTitle">Weather Page</div>
+          <div class="projDesc">Test</div>
+          <div class="projBuild">Built using HTML5, CSS3, and JavaScript</div>
+          <div class="viewer">
+            <div class="liveSite"><a href="https://endeared.github.io/weatherForecastPage/">Live Site ↗</a></div>
+            <div class="GitHub"><a href="https://github.com/Endeared/weatherForecastPage">GitHub Repo ↗</a></div>
+          </div>
+        </div>
+      </div>
+      <div class="project2" id="weather">
+        <div class="projContEven">
+          <div class="projTitle">Weather Page</div>
+          <div class="projDesc">Test</div>
+          <div class="projBuild">Built using HTML5, CSS3, and JavaScript</div>
+          <div class="viewer">
+            <div class="liveSite"><a href="https://endeared.github.io/weatherForecastPage/">Live Site ↗</a></div>
+            <div class="GitHub"><a href="https://github.com/Endeared/weatherForecastPage">GitHub Repo ↗</a></div>
+          </div>
+        </div>
+      </div>
+      <div class="project3" id="weather">
+        <div class="projContOdd">
+          <div class="projTitle">Weather Page</div>
+          <div class="projDesc">Test</div>
+          <div class="projBuild">Built using HTML5, CSS3, and JavaScript</div>
+          <div class="viewer">
+            <div class="liveSite"><a href="https://endeared.github.io/weatherForecastPage/">Live Site ↗</a></div>
+            <div class="GitHub"><a href="https://github.com/Endeared/weatherForecastPage">GitHub Repo ↗</a></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <hr>
+    <div class="githubSection">
+      <div class="githubTitle">GITHUB</div>
+    </div>
+    <hr>
+    <div class="contactSection">
+      <div class="contactTitle">CONTACT</div>
+    </div>
+  </div>
 
 </body>
 
 
 <script>
 
-let carousel = document.querySelector('.carousel');
-let cells = carousel.querySelectorAll('.carousel__cell');
-let cellCount; // cellCount set from cells-range input value
-let selectedIndex = 0;
-let cellWidth = carousel.offsetWidth;
-let cellHeight = carousel.offsetHeight;
-let isHorizontal = true;
-let rotateFn = isHorizontal ? 'rotateY' : 'rotateX';
-let radius, theta;
-// console.log( cellWidth, cellHeight );
+  let carousel = document.querySelector('.carousel');
+  let cells = carousel.querySelectorAll('.carousel__cell');
+  let cellCount; // cellCount set from cells-range input value
+  let selectedIndex = 0;
+  let cellWidth = carousel.offsetWidth;
+  let cellHeight = carousel.offsetHeight;
+  let isHorizontal = true;
+  let rotateFn = isHorizontal ? 'rotateY' : 'rotateX';
+  let radius, theta;
+  // console.log( cellWidth, cellHeight );
 
-function rotateCarousel() {
-  let angle = theta * selectedIndex * -1;
-  carousel.style.transform = 'translateZ(' + -radius + 'px) ' +
-    rotateFn + '(' + angle + 'deg)';
-}
+  function rotateCarousel() {
+    let angle = theta * selectedIndex * -1;
+    carousel.style.transform = 'translateZ(' + -radius + 'px) ' +
+      rotateFn + '(' + angle + 'deg)';
+  }
 
-let prevButton = document.querySelector('.previous-button');
-prevButton.addEventListener( 'click', function() {
-  selectedIndex--;
-  rotateCarousel();
-});
+  let prevButton = document.querySelector('.previous-button');
+  prevButton.addEventListener('click', function () {
+    selectedIndex--;
+    rotateCarousel();
+  });
 
-let nextButton = document.querySelector('.next-button');
-nextButton.addEventListener( 'click', function() {
-  selectedIndex++;
-  rotateCarousel();
-});
+  let nextButton = document.querySelector('.next-button');
+  nextButton.addEventListener('click', function () {
+    selectedIndex++;
+    rotateCarousel();
+  });
 
-let cellsRange = document.querySelector('.cells-range');
-cellsRange.addEventListener( 'change', changeCarousel );
-cellsRange.addEventListener( 'input', changeCarousel );
+  let cellsRange = document.querySelector('.cells-range');
+  cellsRange.addEventListener('change', changeCarousel);
+  cellsRange.addEventListener('input', changeCarousel);
 
 
 
-function changeCarousel() {
-  cellCount = cellsRange.value;
-  theta = 360 / cellCount;
-  let cellSize = isHorizontal ? cellWidth : cellHeight;
-  radius = Math.round( ( cellSize / 2) / Math.tan( Math.PI / cellCount ) );
-  for ( let i=0; i < cells.length; i++ ) {
-    let cell = cells[i];
-    if ( i < cellCount ) {
-      // visible cell
-      cell.style.opacity = 1;
-      let cellAngle = theta * i;
-      cell.style.transform = rotateFn + '(' + cellAngle + 'deg) translateZ(' + radius + 'px)';
-    } else {
-      // hidden cell
-      cell.style.opacity = 0;
-      cell.style.transform = 'none';
+  function changeCarousel() {
+    cellCount = cellsRange.value;
+    theta = 360 / cellCount;
+    let cellSize = isHorizontal ? cellWidth : cellHeight;
+    radius = Math.round((cellSize / 2) / Math.tan(Math.PI / cellCount));
+    for (let i = 0; i < cells.length; i++) {
+      let cell = cells[i];
+      if (i < cellCount) {
+        // visible cell
+        cell.style.opacity = 1;
+        let cellAngle = theta * i;
+        cell.style.transform = rotateFn + '(' + cellAngle + 'deg) translateZ(' + radius + 'px)';
+      } else {
+        // hidden cell
+        cell.style.opacity = 0;
+        cell.style.transform = 'none';
+      }
     }
+
+    rotateCarousel();
   }
 
-  rotateCarousel();
-}
+  let orientationRadios = document.querySelectorAll('input[name="orientation"]');
+  (function () {
+    for (let i = 0; i < orientationRadios.length; i++) {
+      let radio = orientationRadios[i];
+      radio.addEventListener('change', onOrientationChange);
+    }
+  })();
 
-let orientationRadios = document.querySelectorAll('input[name="orientation"]');
-( function() {
-  for ( let i=0; i < orientationRadios.length; i++ ) {
-    let radio = orientationRadios[i];
-    radio.addEventListener( 'change', onOrientationChange );
+  function onOrientationChange() {
+    let checkedRadio = document.querySelector('input[name="orientation"]:checked');
+    isHorizontal = checkedRadio.value == 'horizontal';
+    rotateFn = isHorizontal ? 'rotateY' : 'rotateX';
+    changeCarousel();
   }
-})();
 
-function onOrientationChange() {
-  let checkedRadio = document.querySelector('input[name="orientation"]:checked');
-  isHorizontal = checkedRadio.value == 'horizontal';
-  rotateFn = isHorizontal ? 'rotateY' : 'rotateX';
-  changeCarousel();
-}
-
-// set initials
-onOrientationChange();
+  // set initials
+  onOrientationChange();
 
 
 </script>
+
 </html>
