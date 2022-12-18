@@ -359,23 +359,24 @@
 
   .bgImg {
     position: relative;
-    float: left;
-    width: 500px;
-    background-color: red;
+    width: 600px;
   }
 
   .bgImg img {
-    scale: 30%;
-    position: relative;
-    border: 5px solid black;
-    top: 0px;
-    left: 0px;
+    width: 400px;
+    height: auto;
+    position: absolute;
+    border: 5px solid rgb(69, 69, 69);
+    box-shadow: 0px 0px 20px rgb(80, 80, 96);
+    border-radius: 20px;
+    top: 0;
+    left: 0;
   }
 
   .project1 {
+    position: relative;
     display: flex;
     flex-direction: row;
-    background-color: blue;
   }
 
 </style>
@@ -449,7 +450,9 @@
     <div class="projectsSection">
       <div class="projectsTitle">PROJECTS</div>
       <div class="project1" id="weather">
-        <div class="bgImg"><img src="https://i.postimg.cc/6QLXwPMn/download.png"></div>
+        <div class="bgImg">
+          <img src="https://i.postimg.cc/6QLXwPMn/download.png">
+        </div>
         <div class="projContOdd">
           <div class="projTitle">Weather Page</div>
           <div class="projDesc">
