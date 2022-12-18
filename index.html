@@ -91,7 +91,7 @@
     background-position-x: right;
     background-size: 30%;
     background-repeat: no-repeat;
-    padding-bottom: 150px;
+    padding-bottom: 250px;
   }
 
   .project1 {
@@ -305,13 +305,52 @@
 
   .projContOdd {
     display: flex;
-    align-items: flex-end;
+    align-items: flex-start;
     flex-direction: column;
   }
 
   .viewer {
     display: flex;
     gap: 35px;
+  }
+
+  .projContOdd, .projContEven {
+    max-width: 60%;
+  }
+
+  .projTitle {
+    font-size: 20px;
+    font-weight: 900;
+    padding-bottom: 10px;
+    text-decoration: underline;
+  }
+
+  .viewer {
+    font-size: 20px;
+    padding-top: 10px;
+    font-weight: 900;
+  }
+
+  .projBuild {
+    padding-top: 10px;
+    font-size: 12px;
+    font-weight: 100;
+    font-style: italic;
+  }
+
+  .projContOdd {
+    float: right;
+    text-align: left;
+  }
+
+  .projContEven {
+    float: left;
+    text-align: left;
+  }
+
+  a {
+    text-decoration: none;
+    color: rgb(80, 136, 200);
   }
 
   body {
@@ -391,8 +430,13 @@
       <div class="project1" id="weather">
         <div class="projContOdd">
           <div class="projTitle">Weather Page</div>
-          <div class="projDesc">Test</div>
-          <div class="projBuild">Built using HTML5, CSS3, and JavaScript</div>
+          <div class="projDesc">
+            This website is an open-source project I made as part of the curriculum for <i>The Odin Project's</i> Full Stack course.
+            <br>
+            <br>
+            It operates using <i>OpenWeatherMap's</i> free API, and can query specific cities around the world and quickly return the current weather condition, as well as the day-by-day outlook for the next 7 days.
+          </div>
+          <div class="projBuild">Built using HTML5, CSS3, JavaScript, and OpenWeatherMap API</div>
           <div class="viewer">
             <div class="liveSite"><a href="https://endeared.github.io/weatherForecastPage/">Live Site ↗</a></div>
             <div class="GitHub"><a href="https://github.com/Endeared/weatherForecastPage">GitHub Repo ↗</a></div>
@@ -402,8 +446,13 @@
       <div class="project2" id="stockPage">
         <div class="projContEven">
           <div class="projTitle">Stock Ticker Page</div>
-          <div class="projDesc">Test</div>
-          <div class="projBuild">Built using HTML5, CSS3, and JavaScript</div>
+          <div class="projDesc">
+          This website is an open-source project I made during my own free time, as part of my interest in tracking Stocks / Foreign Exchange prices and values.
+          <br>
+          <br>
+          It utilizes <i>Polygon's</i> free API, and currently only supports Stocks listed on the NASDAQ or NYSE. In the future I plan to add support for Foreign Exchange pairs, as well as additional stocks.
+          </div>
+          <div class="projBuild">Built using HTML5, CSS3, JavaScript, and Polygon API</div>
           <div class="viewer">
             <div class="liveSite"><a href="https://endeared.github.io/stockTickerSiteAndBot/">Live Site ↗</a></div>
             <div class="GitHub"><a href="https://github.com/Endeared/stockTickerSiteAndBot">GitHub Repo ↗</a></div>
@@ -413,8 +462,13 @@
       <div class="project3" id="stockBot">
         <div class="projContOdd">
           <div class="projTitle">Stock Ticker Bot (Discord)</div>
-          <div class="projDesc">Test</div>
-          <div class="projBuild">Built using Python</div>
+          <div class="projDesc">
+          This bot is part of the same open-source project that utilizes JS to pull stock prices / info from <i>Polygon's</i> API (described above).
+          <br>
+          <br>
+          In contrast, this bot uses Python and the discord.py library to parse through the API data and return the data as a cleanly-formatted embed message in a Discord channel.
+          </div>
+          <div class="projBuild">Built using Python, discord.py, and Polygon API</div>
           <div class="viewer">
             <div class="GitHub"><a href="https://github.com/Endeared/stockTickerSiteAndBot">GitHub Repo ↗</a></div>
           </div>
