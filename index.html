@@ -4,10 +4,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="flickity.css" media="screen">
     <script src="index.js" defer></script>
-    <script src="flickity.pkgd.min.js" defer></script>
-    <link rel="styleshe et" type="text/css" href="indexStyle.css">
+    <link rel="stylesheet" type="text/css" href="indexStyle.css">
     <title>Ross' Portfolio</title>
 </head>
 
@@ -17,6 +15,8 @@ body {
     font-family: 'Calibri';
     margin: 0;
     overflow-x: hidden;
+    background-color: rgb(37, 37, 39);
+    color: white;
 }
 
 .mainCont {
@@ -101,7 +101,7 @@ hr {
   height: 140px;
   margin: 80px auto;
   perspective: 1500px;
-  margin-bottom: 20vh;
+  margin-bottom: 10vh;
 }
 
 @media screen and (max-width: 700px) {
@@ -140,6 +140,7 @@ hr {
   border: 5px solid grey;
   border-radius: 10px;
   padding: 10px;
+  box-shadow: 0px 0px 20px rgb(80, 80, 96);
 }
 
 .carousel__cell:nth-child(9n+1) { background: hsl(225, 4%, 21%); }
@@ -162,42 +163,31 @@ hr {
 .carousel__cell:nth-child(8) { transform: rotateY(280deg) translateZ(288px); }
 .carousel__cell:nth-child(9) { transform: rotateY(320deg) translateZ(288px); }
 
-
-
 .carousel-options {
   text-align: center;
   position: relative;
   z-index: 2;
-  background: hsla(0, 0%, 100%, 0.8);
+  display: flex;
+  justify-content: center;
+  margin-right: 150px;
+  margin-bottom: 5vh;
 }
 
-
-
+.carousel-options button {
+  margin: 0;
+  padding: 5px;
+  border: none;
+  background-color:hsla(0, 0%, 0%, 0.794);
+  color: rgb(255, 255, 255);
+  border-radius: 50%;
+  box-shadow: 0px 0px 20px rgb(80, 80, 96);
+  margin-left: 10px;
+  margin-right: 10px;
+}
 
 * {
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
-}
-
-.gallery {
-  background: #EEE;
-}
-
-.gallery-cell {
-  width: 66%;
-  height: 200px;
-  margin-right: 10px;
-  background: #8C8;
-  counter-increment: gallery-cell;
-}
-
-.gallery-cell:before {
-  display: block;
-  text-align: center;
-  content: counter(gallery-cell);
-  line-height: 200px;
-  font-size: 80px;
-  color: white;
 }
 
 .cells-range, .radio {
@@ -255,21 +245,16 @@ hr {
               </div>
               <div class="carousel-options">
                   <input class="cells-range" value="10" />
-                  <button class="previous-button">Previous</button>
-                  <button class="next-button">Next</button>
+                  <button class="previous-button">↺</button>
+                  <button class="next-button">↻</button>
                   <input type="radio" class="radio" name="orientation" value="horizontal" checked />
               </div>
             </div>
         </div>
         <hr>
         <div class="projectsSection">
-          <div class="gallery js-flickity" data-flickity-options='{ "wrapAround": true }'>
-              <div class="gallery-cell"></div>
-              <div class="gallery-cell"></div>
-              <div class="gallery-cell"></div>
-              <div class="gallery-cell"></div>
-              <div class="gallery-cell"></div>
-          </div>
+          <div class="projectsTitle">PROJECTS</div>
+          <div class="project1"></div>
         </div>
         <hr>
         <div class="githubInfo">
