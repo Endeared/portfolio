@@ -41,16 +41,18 @@
     text-align: center;
   }
 
-  .home, .GitHub {
+  .home a, .githubHead a {
     font-size: 24px;
     font-weight: 300;
     transition: 0.2s ease-out;
+    color: rgb(80, 136, 200);
   }
 
-  .home:hover, .GitHub:hover {
+  .home a:hover, .githubHead a:hover {
     font-size: 30px;
     font-weight: 900;
     transition: 0.2s ease-out;
+    color: rgb(61, 103, 152);
     cursor: pointer;
   }
 
@@ -338,6 +340,7 @@
   .viewer {
     display: flex;
     gap: 35px;
+    text-align: center;
   }
 
   .projContOdd,
@@ -475,6 +478,9 @@
 
     .projContOdd,
     .projContEven {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
       max-width: 800px;
       text-align: center;
       align-items: center;
@@ -583,6 +589,21 @@
     transition: 0.3s ease-out;
   }
 
+  hr {
+    opacity: 0;
+    animation: expand .5s ease-in-out 2s forwards;
+  }
+
+  @keyframes expand {
+    from {
+      transform: scaleX(0);
+    }
+    to {
+      opacity: 1;
+      transform: scaleX(1)
+    }
+  }
+
 </style>
 
 <body>
@@ -592,8 +613,8 @@
   <div class="mainCont">
     <div class="landingSection">
       <div class="header">
-        <div class="home">HOME</div>
-        <div class="GitHub">GITHUB</div>
+        <div class="home"><a href="https://endeared.github.io/portfolio/">HOME</a></div>
+        <div class="githubHead"><a href="https://github.com/Endeared">GITHUB</a></div>
       </div>
       <div class="name">
         <div class="firstName">ROSS HAMEY</div>
