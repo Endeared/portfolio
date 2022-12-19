@@ -7,6 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <script src="index.js" defer></script>
   <link rel="stylesheet" type="text/css" href="indexStyle.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css">
   <title>Ross' Portfolio</title>
 </head>
 
@@ -106,7 +107,7 @@
     font-weight: 900;
   }
 
-  .aboutText {
+  .aboutText, .githubDesc {
     margin-top: max(4vh, 0.5vh);
     margin-bottom: max(4vh, 0.5vh);
     font-size: 20px;
@@ -325,17 +326,11 @@
   .projContOdd {
     float: right;
     text-align: left;
-    background-color: red;
-  }
-
-  .project1 .bgImg img {
-    gap:
   }
 
   .projContEven {
     float: left;
     text-align: left;
-    background-color: red;
   }
 
   a {
@@ -347,19 +342,14 @@
     margin: 0;
   }
 
-  .bgImg {
-    position: relative;
-    max-width: 400px;
-    margin-right: 80px;
-    background-color: blue;
-  }
 
   .project1 .bgImg img, .project3 .bgImg img {
     max-width: 400px;
     height: auto;
-    border: 5px solid rgb(69, 69, 69);
+    border: 2px solid rgb(0, 0, 0);
     box-shadow: 0px 0px 20px rgb(80, 136, 200);
     border-radius: 20px;
+    margin-right: 80px;
     top: 0;
     left: 0;
   }
@@ -367,9 +357,10 @@
   .project2 .bgImg img, .project4 .bgImg img {
     max-width: 400px;
     height: auto;
-    border: 5px solid rgb(69, 69, 69);
+    border: 2px solid rgb(0, 0, 0);
     box-shadow: 0px 0px 20px rgb(80, 136, 200);
     border-radius: 20px;
+    margin-left: 80px;
     top: 0;
     right: 0;
   }
@@ -377,6 +368,7 @@
   .project1, .project2, .project3, .project4 {
     display: flex;
     flex-direction: row;
+    align-items: center;
   }
 
   @media screen and (max-width: 700px) {
@@ -427,14 +419,71 @@
     }
 
     .bgImg {
-      margin-right: 0;
+      margin: 0;
     }
 
     .project1 .bgImg img, .project2 .bgImg img, .project3 .bgImg img, .project4 .bgImg img {
       max-width: 300px;
+      margin: 0;
       height: auto;
     }
   }
+
+  .githubCont {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .githubPfp img {
+    height: 50px;
+    width: auto;
+    box-shadow: 0px 0px 20px rgb(80, 136, 200);
+    border: none;
+    border-radius: 50%;
+    margin-left: 20px;
+  }
+
+  .githubLinks img {
+    height: 50px;
+    width: auto;
+    box-shadow: 0px 0px 20px rgb(80, 136, 200);
+    border-radius: 50%;
+    animation: glow 1s ease-in-out infinite alternate;
+}
+
+@keyframes glow {
+  from {
+    box-shadow: 0 0 10px -10px rgb(80, 136, 200);
+  }
+  to {
+    box-shadow: 0 0 10px 1px rgb(80, 136, 200);
+  }
+}
+
+
+  .githubLinks {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 25px;
+  }
+
+  .githubLinks {
+    font-size: 32px;
+    color: rgb(27, 27, 27);
+    font-weight: 900;
+    animation: glow2 1s ease-in-out infinite alternate;
+}
+
+@keyframes glow2 {
+  from {
+    text-shadow: 0 0 -10px white;
+  }
+  to {
+    text-shadow: 0 0 10px rgb(80, 136, 200);
+  }
+}
 
 </style>
 
@@ -464,13 +513,10 @@
         <br>
         <br>
         <i>I've always been someone who has been interested in technology, and have had a knack for working with
-          computers. Going into college, I decided to major in Biology as it is what I believed I wanted to do at the
-          time.</i>
+          computers. I am currently a pursuing a Bachelor's of Science for Biology in College (I know - surprise!).</i>
         <br>
         <br>
-        However, I eventually found that the material was not as engaging as I had hoped, and more recently, I have
-        become infatuated with coding / web development. It is a rather alluring task to me, as you can watch a product
-        or project grow infront of you into whatever you desire.
+        More recently, I have become infatuated with coding / web development. It is a rather alluring task to me, as you can watch a product or project grow infront of you into whatever you desire.
       </div>
       <div class="aboutLangs">
         <div class="scene">
@@ -587,10 +633,26 @@
     <hr>
     <div class="githubSection">
       <div class="githubTitle">GITHUB</div>
+      <div class="githubDesc">
+        Although I regularly work a remote job & plan to return to classes for the Spring / Summer semesters of 2023, I have a GitHub that I regularly maintain and update repositories on for projects.
+        <br>
+        <br>
+        Some of these projects are part of assignments for online curriculum that I am self-learning, but other repositories are for fun projects that I make on my own.
+        <br>
+        <br>
+        <em>All of my repositories are open source and free to use.</em> If you find that any of the code available on there may be useful to you, feel free to use it!
+      </div>
+      <div class="githubCont">
+        <div class="githubLinks">
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" />
+          ENDEARED
+        </div>
+      </div>
     </div>
     <hr>
     <div class="contactSection">
       <div class="contactTitle">CONTACT</div>
+      <div class="githubPfp"><img src="https://raw.githubusercontent.com/Endeared/Endeared/main/endeared.png"></div>
     </div>
   </div>
 
