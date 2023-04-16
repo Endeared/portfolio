@@ -2,244 +2,332 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <script src="index.js" defer></script>
-  <link rel="stylesheet" type="text/css" href="indexStyle.css">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css">
-  <title>Web / Software Developer | Ross Hamey</title>
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-RFEQWV4LFT"></script>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel='stylesheet' href="indexStyles.css">
+    <link rel="stylesheet" href="animation.css.map" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@300&display=swap" rel="stylesheet">
 </head>
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-RFEQWV4LFT"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-RFEQWV4LFT');
-</script>
 
 <body>
 
-  <div id="timer"></div>
+    <div class="page-bg"></div>
 
-  <div class="mainCont">
-    <div class="landingSection">
-      <div class="header">
-        <div class="home"><a href="https://endeared.github.io/portfolio/">HOME</a></div>
-        <div class="githubHead"><a href="https://github.com/Endeared">GITHUB</a></div>
-      </div>
-      <div class="name">
-        <div class="firstName">ROSS HAMEY</div>
-        <div class="firstTitle">WEB / SOFTWARE</div>
-        <div class="holder">
-        </div>
-      </div>
+    <div class="animation-wrapper">
+        <div class="particle particle-1"></div>
+        <div class="particle particle-2"></div>
+        <div class="particle particle-3"></div>
+        <div class="particle particle-4"></div>
     </div>
-    <hr>
-    <div class="aboutSection">
-      <div class="aboutTitle">ABOUT</div>
-      <div class="aboutText">
-        Hey! My name is Ross Hamey and I am a 24-year-old aspiring Web / Software Developer.
-        <br>
-        <br>
-        I've always been someone who has been interested in technology, and have had a knack for working with
-          computers since I was younger. I am currently a pursuing a Bachelor's of Science for Biology in College (I
-          know - surprise!).
-        <br>
-        <br>
-        More recently, I have become infatuated with coding / web development. It is a rather alluring task to me, as
-        you can watch a product or project grow infront of you into whatever you desire. In total, I have been coding for ~6 months.
-      </div>
-      <div class="aboutLangs">
-        <div class="scene">
-          <div class="carousel">
-            <div class="carousel__cell"><img
-                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" /></div>
-            <div class="carousel__cell"><img
-                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" /></div>
-            <div class="carousel__cell"><img
-                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" /></div>
-            <div class="carousel__cell"><img
-                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" /></div>
-            <div class="carousel__cell"><img
-                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" /></div>
-            <div class="carousel__cell"><img
-                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" /></div>
-            <div class="carousel__cell"><img
-                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/npm/npm-original-wordmark.svg" /></div>
-            <div class="carousel__cell"><img
-                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" /></div>
-            <div class="carousel__cell"><img
-                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jquery/jquery-original.svg" /></div>
-            <div class="carousel__cell"><img
-                src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/flask/flask-original.svg" /></div>
-          </div>
+
+    <div class="page-wrapper">
+
+        <div class="container">
+            <div class="wrapper">
+                <div class="mainCont">
+                    <div class="nav">
+                        <ul>
+                            <li><a class="hovernav" href='https://endeared.github.io/portfolio/'>Home</a></li>
+                            <li><a class="hovernav" href='https://github.com/Endeared'>GitHub</a></li>
+                            <li><a class="hovernav" href='mailto: rosshamey@gmail.com'>Contact</a></li>
+                        </ul>
+                    </div>
+                    <hr class="targetMeHr">
+
+                    <div class="intro">
+                        <div class="pfp">
+                            <img id='pfp' src="https://i.imgur.com/RYJNEvq.jpg">
+                        </div>
+                        <div id="name" class="targetMe">Ross Hamey</div>
+                        <div id="title" class="targetMe">Web & Software Developer</div>
+                        <div id="description" class="targetMe">I am a self-taught web / software developer currently
+                            majoring in Biology
+                            at
+                            Miami
+                            University.</div>
+                        <div class="socials">
+                            <ul>
+                                <li><a href='https://github.com/Endeared'>
+                                        <div id='githubHov'>
+                                            <img id='github' class='github' src='imgs/github.png'>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li><a href='https://www.linkedin.com/in/ross-h-05866025a/'>
+                                        <div id='linkedinHov'>
+                                            <img class='linkedin' id='linkedin' src='imgs/linkedin.png'>
+                                        </div>
+                                    </a></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <hr class="targetMeHr">
+
+                    <div class="langs">
+                        <div id="langsTitle" class="targetMe">Languages / Frameworks</div>
+                        <div id="langsSymbol" class="targetMe">
+                            <img id="languages" src="imgs/languages.png">
+                        </div>
+                        <div id="languageIcons">
+                            <ul>
+                                <li><img class='html5' id='html5' src='imgs/html5-plain.png'></li>
+                                <li><img class='css3' id='css3' src='imgs/css3-plain.png'></li>
+                                <li><img class='js' id='js' src='imgs/javascript-plain.png'></li>
+                                <li><img class='react' id='react' src='imgs/react-original.png'></li>
+                                <li><img class='node' id='node' src='imgs/nodejs-plain.png'></li>
+
+                                <li><img class='python' id='python' src='imgs/python-plain.png'></li>
+                                <li><img class='cpp' id='cpp' src='imgs/cplusplus-plain.png'></li>
+                                <li><img class='lua' id='lua' src='imgs/lua-plain.png'></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <hr class="targetMeHr">
+
+                    <div class="projs">
+                        <div id="projTitle" class="targetMe">Projects</div>
+                        <div id="projSymbol" class="targetMe">
+                            <img id="brackets" src="imgs/brackets.png">
+                        </div>
+                        <div id="projsBox">
+                            <div class="row">
+                                <div class="column">
+                                    <div id="project" class="targetMe">
+                                        <div class="content">
+                                            <div id="projname">Billiards Ball Identifier</div>
+                                            <div id="builtWith">Python, OpenCV, YOLOv5, PyTorch</div>
+                                            <div id="projdesc">A neural network object detection model for identifying
+                                                billiards
+                                                balls on a pool table.</div>
+                                            <div id="link"><a class="repolink"
+                                                    href='https://github.com/Endeared/poolTableBot'>Repository →</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div id="project" class="targetMe">
+                                        <div class="content">
+                                            <div id="projname">Weather Web App</div>
+                                            <div id="builtWith">HTML5, CSS3, JavaScript</div>
+                                            <div id="projdesc">Simple weather web app. One of my first ever JavaScript
+                                                projects.
+                                                Uses OpenWeatherMap API.</div>
+                                            <div id="link"><a class="repolink"
+                                                    href='https://endeared.github.io/weatherForecastPage/'>Live Site
+                                                    →</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div id="project" class="targetMe">
+                                        <div class="content">
+                                            <div id="projname">Static Landing Page</div>
+                                            <div id="builtWith">HTML5, CSS3</div>
+                                            <div id="projdesc">I had to make various static pages as practice for an
+                                                online
+                                                course (The Odin Project) I was completing. Below is one such example.
+                                            </div>
+                                            <div id="link"><a class="repolink"
+                                                    href='https://endeared.github.io/adminPage/'>Live
+                                                    Site →</a></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="column">
+                                    <div id="project" class="targetMe">
+                                        <div class="content">
+                                            <div id="projname">Static Cursor Website</div>
+                                            <div id="builtWith">HTML5, CSS3, JavaScript, Node, Firebase / MongoDB</div>
+                                            <div id="projdesc">Simple cursor website for a game. Freelance project.
+                                                Currently in
+                                                the process of building a full rewrite using Node, Firebase, and
+                                                MongoDB.
+                                            </div>
+                                            <div id="link"><a class="repolink" href='https://cursors.pro/'>Live Site
+                                                    →</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div id="project" class="targetMe">
+                                        <div class="content">
+                                            <div id="projname">Discord Bots</div>
+                                            <div id="builtWith">Python, Firebase</div>
+                                            <div id="projdesc">Various Discord bots built using Python - all are
+                                                personal
+                                                projects I made.</div>
+                                            <div id="link"><a class="repolink"
+                                                    href='https://github.com/Endeared/pythonDiscBots'>Repository →</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- <div class="images">
+                    <img src="imgs/bio1.png" class="bio1">
+                    <img src="imgs/bio2.png" class="bio2">
+                    <img src="imgs/bio3.png" class="bio3">
+                    <img src="imgs/bio4.png" class="bio4">
+                </div> -->
+
+
+            </div>
         </div>
-        <div class="carousel-options">
-          <input class="cells-range" value="10" />
-          <button class="previous-button">↺</button>
-          <button class="next-button">↻</button>
-          <input type="radio" class="radio" name="orientation" value="horizontal" checked />
-        </div>
-      </div>
-    </div>
-    <hr>
-    <div class="projectsSection">
-      <div class="projectsTitle">PROJECTS</div>
-      <div class="project1" id="weather">
-        <div class="bgImg">
-          <img src="https://i.postimg.cc/6QLXwPMn/download.png">
-        </div>
-        <div class="projContOdd">
-          <div class="projTitle">Weather Page</div>
-          <div class="projDesc">
-            This website is an open-source project I made as part of the curriculum for <i>The Odin Project's</i> Full
-            Stack course.
-            <br>
-            <br>
-            It operates using <i>OpenWeatherMap's</i> free API, and can query specific cities around the world and
-            quickly return the current weather condition, as well as the day-by-day outlook for the next 7 days.
-          </div>
-          <div class="projBuild">Built using HTML5, CSS3, JavaScript, and OpenWeatherMap API</div>
-          <div class="viewer">
-            <div class="liveSite"><a href="https://endeared.github.io/weatherForecastPage/">Live Site ↗</a></div>
-            <div class="GitHub"><a href="https://github.com/Endeared/weatherForecastPage">GitHub Repo ↗</a></div>
-          </div>
-        </div>
-      </div>
-      <div class="project2" id="stockPage">
-        <div class="projContEven">
-          <div class="projTitle">Stock Ticker Page</div>
-          <div class="projDesc">
-            This website is an open-source project I made during my own free time, as part of my interest in tracking
-            Stocks / Foreign Exchange prices and values.
-            <br>
-            <br>
-            It utilizes <i>Polygon's</i> free API, and currently only supports Stocks listed on the NASDAQ or NYSE. In
-            the future I plan to add support for Foreign Exchange pairs, as well as additional stocks.
-          </div>
-          <div class="projBuild">Built using HTML5, CSS3, JavaScript, and Polygon API</div>
-          <div class="viewer">
-            <div class="liveSite"><a href="https://endeared.github.io/stockTickerSiteAndBot/">Live Site ↗</a></div>
-            <div class="GitHub"><a href="https://github.com/Endeared/stockTickerSiteAndBot">GitHub Repo ↗</a></div>
-          </div>
-        </div>
-        <div class="bgImg">
-          <img src="https://i.postimg.cc/63CqRz6h/download-1.png">
-        </div>
-      </div>
-      <div class="project3" id="stockBot">
-        <div class="bgImg">
-          <img src="https://i.postimg.cc/mrXJjGkL/download-2.png">
-        </div>
-        <div class="projContOdd">
-          <div class="projTitle">Stock Ticker Bot (Discord)</div>
-          <div class="projDesc">
-            This bot is part of the same open-source project that utilizes JS to pull stock prices / info from
-            <i>Polygon's</i> API (described above).
-            <br>
-            <br>
-            In contrast, this bot uses Python and the discord.py library to parse through the API data and return the
-            data as a cleanly-formatted embed message in a Discord channel.
-          </div>
-          <div class="projBuild">Built using Python, discord.py, and Polygon API</div>
-          <div class="viewer">
-            <div class="GitHub"><a href="https://github.com/Endeared/stockTickerSiteAndBot">GitHub Repo ↗</a></div>
-          </div>
-        </div>
-      </div>
-      <div class="project4" id="staticPages">
-        <div class="projContEven">
-          <div class="projTitle">Various Static Pages</div>
-          <div class="projDesc">
-            I also regularly make various static pages, all for personal projects, for fun, or for assignments as per
-            curriculum that I am undergoing.
-            <br>
-            <br>
-            None of these pages have a back-end associated with them (currently), although I do have plans in the future
-            to implement back-end features!
-          </div>
-          <div class="projBuild">Built using HTML5, CSS3, and JavaScript</div>
-          <div class="viewer">
-            <div class="liveSite"><a href="https://endeared.github.io/adminPage/">Live Example ↗</a></div>
-            <div class="GitHub"><a href="https://github.com/Endeared/adminPage">GitHub Repo ↗</a></div>
-          </div>
-        </div>
-        <div class="bgImg">
-          <img src="https://i.postimg.cc/gmhrj21S/download-3.png">
-        </div>
-      </div>
-    </div>
-    <div class="project5" id="freelanceProjs">
-      <div class="bgImg">
-        <img src="https://i.postimg.cc/jj325pbN/img.png">
-      </div>
-      <div class="projContOdd">
-        <div class="projTitle">Various Freelance Projects</div>
-        <div class="projDesc">
-          In addition to static sites, I also make freelance projects every once in awhile - some are paid projects, and some are volunteer projects. 
-          I have experience building web apps with HTML / CSS / JS + NodeJS, as well as several projects using Python. I typically use Firebase or MongoDB
-          as my database(s) for these projects.
-          <br>
-          <br>
-          One of my favorite projects is a site for a video game, where users can easily copy / select cursors to use in-game. It is a web-app based project,
-          with some components and moving parts that are used in-game. You can view the web component of the application below.
-        </div>
-        <div class="projBuild">Built using HTML5, CSS3, JavaScript, Lua, NodeJS, Firebase, and MongoDB.</div>
-        <div class="viewer">
-          <div class="liveSite"><a href="https://cursors.up.railway.app/home">Live Example ↗</a></div>
-        </div>
-      </div>
-    </div>
-    <hr>
-    <div class="githubSection">
-      <div class="githubTitle">GITHUB</div>
-      <div class="githubDesc">
-        Although I work a remote job & have classes that I am attending, I
-        have a GitHub that I regularly maintain and update repositories on for projects.
-        <br>
-        <br>
-        Some of these projects are part of assignments for online curriculum that I am self-learning, but other
-        repositories are for fun projects that I make on my own.
-        <br>
-        <br>
-        <em>All of my repositories that are not work / freelance related are open source and free to use.</em> If you find that any of the code available on
-        there may be useful to you, feel free to use it!
-      </div>
-      <div class="githubCont">
-        <a class="githubContLink" href="https://github.com/Endeared">
-          <div class="githubLinks">
-            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" />
-            ENDEARED
-          </div>
-        </a>
-      </div>
-    </div>
-    <hr>
-    <div class="contactSection">
-      <div class="contactTitle">CONTACT</div>
-      <div class="contactDesc">
-        If you have any questions or inquiries, you can contact me via E-mail below.
-        <br>
-        <br>
-        I have plans in the future to implement a fully-functional contact form (back-end included) once I have a little
-        more experience.
-        <br>
-        <br>
-        I hope you enjoyed reading through my website and browsing a few of my projects. Have a good one!
-      </div>
-      <div class="emailCont">
-        <a class="emailContLink" href="mailto: rosshamey@gmail.com">
-          <div class="githubPfp"><img src="https://raw.githubusercontent.com/Endeared/Endeared/main/endeared.png"></div>
-          <div class="emailTxt">EMAIL ME</div>
-        </a>
-      </div>
 
     </div>
-  </div>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
 
 </body>
+
+<script>
+    function handleIntersect(entries, observer) {
+        entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+                if (entry.target.classList.contains('targetMe')) {
+                    entry.target.classList.add('fadeInClass')
+                } else if (entry.target.classList.contains('targetMeHr')) {
+                    entry.target.classList.add('open')
+                } else if (entry.target.classList.contains('nav')) {
+                    entry.target.classList.remove('nav')
+                    entry.target.classList.add('navAnim')
+                } else if (entry.target.classList.contains('github')) {
+                    entry.target.classList.remove('github')
+                    entry.target.classList.add('githubAnim')
+                } else if (entry.target.classList.contains('linkedin')) {
+                    entry.target.classList.remove('linkedin')
+                    entry.target.classList.add('linkedinAnim')
+                } else if (entry.target.classList.contains('html5')) {
+                    entry.target.classList.remove('html5')
+                    console.log('found html')
+                    entry.target.classList.add('html5Anim')
+                } else if (entry.target.classList.contains('css3')) {
+                    entry.target.classList.remove('css3')
+                    entry.target.classList.add('css3Anim')
+                } else if (entry.target.classList.contains('js')) {
+                    entry.target.classList.remove('js')
+                    entry.target.classList.add('jsAnim')
+                } else if (entry.target.classList.contains('react')) {
+                    entry.target.classList.remove('react')
+                    entry.target.classList.add('reactAnim')
+                } else if (entry.target.classList.contains('node')) {
+                    entry.target.classList.remove('node')
+                    entry.target.classList.add('nodeAnim')
+                } else if (entry.target.classList.contains('python')) {
+                    entry.target.classList.remove('python')
+                    entry.target.classList.add('pythonAnim')
+                } else if (entry.target.classList.contains('cpp')) {
+                    entry.target.classList.remove('cpp')
+                    entry.target.classList.add('cppAnim')
+                } else if (entry.target.classList.contains('lua')) {
+                    entry.target.classList.remove('lua')
+                    entry.target.classList.add('luaAnim')
+                }
+            } else {
+                if (entry.target.classList.contains('fadeInClass')) {
+                    entry.target.classList.remove('fadeInClass')
+                } else if (entry.target.classList.contains('open')) {
+                    entry.target.classList.remove('open')
+                } else if (entry.target.classList.contains('navAnim')) {
+                    entry.target.classList.remove('navAnim')
+                    entry.target.classList.add('nav')
+                } else if (entry.target.classList.contains('linkedinAnim')) {
+                    entry.target.classList.remove('linkedinAnim')
+                    entry.target.classList.add('linkedin')
+                } else if (entry.target.classList.contains('githubAnim')) {
+                    entry.target.classList.remove('githubAnim')
+                    entry.target.classList.add('github')
+                } else if (entry.target.classList.contains('html5Anim')) {
+                    entry.target.classList.remove('html5Anim')
+                    entry.target.classList.add('html5')
+                } else if (entry.target.classList.contains('css3Anim')) {
+                    entry.target.classList.remove('css3Anim')
+                    entry.target.classList.add('css3')
+                } else if (entry.target.classList.contains('jsAnim')) {
+                    entry.target.classList.remove('jsAnim')
+                    entry.target.classList.add('js')
+                } else if (entry.target.classList.contains('reactAnim')) {
+                    entry.target.classList.remove('reactAnim')
+                    entry.target.classList.add('react')
+                } else if (entry.target.classList.contains('nodeAnim')) {
+                    entry.target.classList.remove('nodeAnim')
+                    entry.target.classList.add('node')
+                } else if (entry.target.classList.contains('pythonAnim')) {
+                    entry.target.classList.remove('pythonAnim')
+                    entry.target.classList.add('python')
+                } else if (entry.target.classList.contains('cppAnim')) {
+                    entry.target.classList.remove('cppAnim')
+                    entry.target.classList.add('cpp')
+                } else if (entry.target.classList.contains('luaAnim')) {
+                    entry.target.classList.remove('luaAnim')
+                    entry.target.classList.add('lua')
+                }
+            }
+        })
+    }
+
+    function handleIntersectHr(entries, observer) {
+        entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('open')
+            } else {
+                entry.target.classList.remove('open')
+            }
+        })
+    }
+
+    let observer = new IntersectionObserver(handleIntersect);
+    let targets = '.targetMe'
+    let targetsHr = '.targetMeHr'
+    let targetNav = '.nav'
+    let github = document.getElementById('github')
+    let linkedin = document.getElementById('linkedin')
+    let html5 = document.getElementById('html5')
+    let css3 = document.getElementById('css3')
+    let js = document.getElementById('js')
+    let react = document.getElementById('react')
+    let node = document.getElementById('node')
+    let python = document.getElementById('python')
+    let cpp = document.getElementById('cpp')
+    let lua = document.getElementById('lua')
+    document.querySelectorAll(targets).forEach((target) => {
+        if (target) {
+            observer.observe(target)
+        }
+    })
+    document.querySelectorAll(targetsHr).forEach((targetHr) => {
+        if (targetHr) {
+            observer.observe(targetHr)
+        }
+    })
+    document.querySelectorAll(targetNav).forEach((nav) => {
+        if (nav) {
+            observer.observe(nav)
+        }
+    })
+    observer.observe(github)
+    observer.observe(linkedin)
+    observer.observe(html5)
+    observer.observe(css3)
+    observer.observe(js)
+    observer.observe(react)
+    observer.observe(node)
+    observer.observe(python)
+    observer.observe(cpp)
+    observer.observe(lua)
+    // let projTitle = document.getElementById('projTitle')
+    // observer = new IntersectionObserver(handleIntersect);
+    // observer.observe(projTitle)
+</script>
 
 </html>
