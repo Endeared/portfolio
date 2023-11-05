@@ -255,22 +255,9 @@ body::-webkit-scrollbar {
 } */
 
 .githubAnim {
-    animation: githubSlide 1s ease-in-out;
+    animation: linkedinSlide 1s ease-in-out;
+    animation-delay: 0.3s;
     animation-fill-mode: forwards;
-}
-
-@keyframes githubSlide {
-    0% {
-        transform: translateX(25vw);
-        opacity: 0;
-        display: none;
-    }
-
-    100% {
-        transform: translateX(0);
-        opacity: 1;
-        display: block;
-    }
 }
 
 .linkedinAnim {
@@ -281,15 +268,11 @@ body::-webkit-scrollbar {
 
 @keyframes linkedinSlide {
     0% {
-        transform: translateX(25vw);
         opacity: 0;
-        display: none;
     }
 
     100% {
-        transform: translateX(0);
         opacity: 1;
-        display: block;
     }
 }
 
